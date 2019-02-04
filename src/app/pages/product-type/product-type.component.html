@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Product Types
+      <button class="float-right btn-outline-secondary btn">
+        <i class="fa fa-plus "></i> Add Category
+      </button>
+    </div>
+    <div class="card-body">
+      <ol class="breadcrumb">
+        <li
+          class="breadcrumb-item"
+          *ngFor="let breadcrumb of breadcrumb"
+          (click)="spliceBreadcrumb(breadcrumb)"
+        >
+          {{ breadcrumb }}
+        </li>
+      </ol>
+      <div class="list-group">
+        <a
+          class="list-group-item list-group-item-action"
+          
+          *ngFor="let productType of productType"
+          (click)="listByParentId(productType)"
+        >
+          {{ productType.name }}
+          <div class="btn-group float-right" role="group" aria-label="Buttons">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              title="Edit Product"
+            >
+              <i class="fa fa-edit"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              title="Delete Product"
+              (click)="open(productType.id)"
+            >
+              <i class="fa fa-trash"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              *ngIf="productType.leafNode"
+              title="Add Product"
+            >
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

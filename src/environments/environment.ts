@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_userService : 'http://dev.seeyeit.com/user-service/',
+  api_ProductTypes : 'http://dev.seeyeit.com/products-service/',
+  isLogin : false
 };
 
 /*

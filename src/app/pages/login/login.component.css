@@ -1,0 +1,12 @@
+.round{
+    border-radius: 50%;
+}
+
+.login100-form-title1 {
+    font-family: Poppins-Medium;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+}

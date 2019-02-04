@@ -1,0 +1,19 @@
+
+<!-- Modal window for delete product... Confirmation box -->
+<ng-template #deleteProduct let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Delete Product</h4>
+      <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+            <div class="modal-body">
+                <p>Are you sure about this ?</p>
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" (click)="close()">Cancel</button>
+        <button class="btn btn-danger" (click)="deleteProductById()">Delete</button>
+    </div>
+  </ng-template>

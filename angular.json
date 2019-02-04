@@ -18,14 +18,35 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/assets/vendor/bootstrap/css/bootstrap.min.css",
+              "./src/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css",
+              "./src/assets/fonts/iconic/css/material-design-iconic-font.min.css",
+              "./src/assets/vendor/animate/animate.css",
+              "./src/assets/vendor/css-hamburgers/hamburgers.min.css",
+              "./src/assets/vendor/animsition/css/animsition.min.css",
+              "./src/assets/vendor/select2/select2.min.css",
+              "./src/assets/vendor/daterangepicker/daterangepicker.css",
+              "./src/assets/css/util.css",
+              "./src/assets/css/main.css",
+              "./node_modules/primeng/resources/themes/nova-light/theme.css",
+              "./node_modules/primeng/resources/primeng.min.css"        
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.slim.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              
+              "./src/assets/vendor/select2/select2.min.js",
+              "./src/assets/js/main.js",
+              "./src/assets/vendor/daterangepicker/moment.min.js",
+              "./src/assets/vendor/animsition/js/animsition.min.js",
+              "./src/assets/vendor/daterangepicker/daterangepicker.js",
+              "./src/assets/vendor/countdowntime/countdowntime.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -71,26 +92,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.css"],
             "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.ico", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -115,9 +126,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
